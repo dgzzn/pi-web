@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Projeto Integrador</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/custom-themes.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+</head>
+
+<body>
+    <div class="page-wrapper chiller-theme sidebar-bg bg1 toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">Sistema sem nome</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <div class="sidebar-header">
+
+                    <!-- FOTO DO USUÁRIO -->
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="../assets/img/user.jpg" alt="User picture">
+                    </div>
+                    
+                    <!-- NOME DO USUÁRIO -->
+                    <div class="user-info">
+                        <span class="user-name">Diego
+                            <strong>Gomes</strong>
+                        </span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-search">
+
+                    <!-- BARRA DE PESQUISA -->
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Procurar...">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>Menu</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-user-alt"></i>
+                                <span>Cliente</span>
+                                <!-- <span class="badge badge-pill badge-danger">New</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Adicionar novo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Alterar dados</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Procurar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Produto</span>
+                                <!-- <span class="badge badge-pill badge-primary">3</span> -->
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Adicionar novo
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Alterar dados</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Procurar</a>
+                                    </li>
+                                    <li>
+                                            <a href="#">Medida</a>
+                                    </li>
+                                    <li>
+                                            <a href="#">Marca</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-user"></i>
+                                <span>Funcionário</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Adicionar novo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Alterar dados</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Procurar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-paperclip"></i>
+                                <span>Outros </span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Cargo</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Forma de pagamento</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-dollar-sign "></i>
+                                <span>VENDA</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Efetuar nova venda</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ver vendas finalizadas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div>
+
+            </div>
+
+           
+        </nav>
+
+        <!-- CONTEUDO DA PÁGINA -->
+        <main class="page-content">
+            <div class="container-fluid">
