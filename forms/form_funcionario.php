@@ -1,6 +1,6 @@
 <?php include_once("../header.html"); ?>
 
-<h1>Registrar cliente</h1><br>
+<h1>Registrar funcionário</h1><br>
 <h6><i>* = obrigatório</i></h6><br>
 <fieldset>
 <legend>Informações pessoais</legend>
@@ -9,23 +9,18 @@
             <label for="nome"><b>Nome completo*</b></label>
             <input type="text" class="form-control col-md-12" name="nome" id="nome" aria-describedby="helpId" placeholder="Nome completo">
         </div>
-        <b>Tipo de pessoa*: </b><br>
-        <div class="form-check form-check-inline">
-            <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="tipo_pessoa" id="tipo_pessoa" value="física"> Física
-            </label>
+        <div class="form-group">
+            <label for="cpf"><b>CPF*</b></label>
+            <input type="text" class="form-control col-md-12" name="cpf" id="cpf" aria-describedby="helpId" placeholder="000.000.000-00">
         </div>
-        <div class="form-check form-check-inline">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="tipo_pessoa" id="tipo_pessoa" value="jurídica"> Jurídica
-            </label>
+        <div class="form-group">
+            <label for="login"><b>Login*</b></label>
+            <input type="text" class="form-control col-md-12" name="login" id="login" aria-describedby="helpId" placeholder="">
         </div>
-        <div class="form-group"><br>
-            <label for="cpf_cnpj"><b>CPF/CNPJ*</b></label>
-            <input type="text" class="form-control col-md-12" name="cpf_cnpj" id="cpf_cnpj" aria-describedby="helpId" placeholder="000.000.000-00 | 00.000.000/0000-00">
-            <small id="helpId" class="form-text text-muted">*apenas os números</small>
+        <div class="form-group">
+            <label for="password"><b>Senha*</b></label>
+            <input type="password" class="form-control col-md-12" name="password" id="password" aria-describedby="helpId" placeholder="">
         </div>
-
     <div class="row">
         <div class="form-group col-md-6 col-sm-6">
                 <label for="tel1"><b>Telefone 1*   </b></label>
@@ -46,6 +41,21 @@
         <label for="email"><b>Email*</b></label>
         <input type="email" class="form-control col-md-12" name="email" id="email" aria-describedby="helpId" placeholder="exemplo@exemplo.com">
     </div>
+    <div class="row">
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="foto"><b>Foto*</b></label>
+            <input type="file" class="form-control" name="foto" id="foto" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="cargo"><b>Cargo*</b></label>
+            <select class="form-control" name="cargo" id="cargo">
+                <option>Vendedor</option>
+                <option>Gerente</option>
+                <option>Diretor</option>
+            </select>
+        </div>
+    </div>
+
 </fieldset>
 <fieldset>
     <legend>Endereço</legend>
@@ -97,10 +107,6 @@
 
 
 </div>
-
-
-
-
 
 
 <?php include_once("../footer.html"); ?>
