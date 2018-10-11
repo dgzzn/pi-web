@@ -93,7 +93,7 @@
     </div>
     </fieldset>
     <button type="submit" class="btn btn-dark col-md-12">Finalizar cadastro</button>
-</form>
+    </form>
 
 
 </div>

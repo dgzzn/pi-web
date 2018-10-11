@@ -51,13 +51,7 @@
 </fieldset>
             <button type="submit" class="btn btn-dark col-md-12">Finalizar cadastro</button>
 </form>
-
-
 </div>
-
-
-
-
 
 
 <?php include_once("../footer.html"); ?>

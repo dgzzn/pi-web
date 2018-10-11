@@ -1,4 +1,4 @@
-<?php include_once("header.html"); ?>
+<?php include_once("../header.html"); ?>
 
 
     <form action="" method="post">
@@ -12,4 +12,4 @@
 
 
 
-<?php include_once("footer.html"); ?>
+<?php include_once("../footer.html"); ?>
