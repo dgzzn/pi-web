@@ -1,6 +1,6 @@
 <?php
 
-    include_once '../Conexao.php';
+    include_once '../../Conexao.php';
 
     class CargoSQL{
         protected $id_cargo;
@@ -84,6 +84,13 @@
 
         public function procurar(){
             $sql = "select * from cargo";
+            return (new Conexao())->recuperarDados($sql);
+        }
+
+        public function excluir($id)
+        {
+            $sql = "delete from cargo where id_cargo=$id";
+            return (new Conexao())->executar($sql);
         }
     }
 

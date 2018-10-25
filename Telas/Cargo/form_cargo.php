@@ -1,10 +1,11 @@
-<?php include_once("../header.html"); ?>
+<?php include_once("../../header.html"); ?>
+
 
 <h1>Registrar cargo</h1><br>
 <h6><i>* = obrigatório</i></h6><br>
 
 
-    <form action="../DAO/CargoDAO.php" method="post">
+    <form action="CargoDAO.php?acao=salvar" method="post">
         <fieldset>
             <legend>Informações do cargo</legend>
             <div class="form-group">
@@ -34,24 +35,7 @@
         </fieldset>
         <button type="submit" class="btn btn-dark col-md-12">Finalizar cadastro</button>
     </form>
-<br><br>
-    <fieldset>
-        <legend>Cargos</legend>
-        <div class="table-responsive">
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Nome do cargo</th>
-                    <th>Nível</th>
-                    <th>Desconto máximo</th>
-                </tr>
-                </thead>
-                <tbody>
 
-                </tbody>
-            </table>
-        </div>
-    </fieldset>
 
-<?php include_once("../footer.html"); ?>
+
+<?php include_once("../../footer.html"); ?>

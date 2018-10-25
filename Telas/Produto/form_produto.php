@@ -1,4 +1,4 @@
-<?php include_once("../header.html"); ?>
+<?php include_once("../../header.html"); ?>
 
 <h1>Registrar produto</h1><br>
 <h6><i>* = obrigatório</i></h6><br>
@@ -54,4 +54,4 @@
 </div>
 
 
-<?php include_once("../footer.html"); ?>
+<?php include_once("../../footer.html"); ?>
