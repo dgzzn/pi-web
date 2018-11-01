@@ -1,6 +1,8 @@
 <?php  include_once '../../header.html';
 include_once 'MarcaSQL.php';
-$marcas = (new MarcaSQL())->procurar();?>
+$marcas = (new MarcaSQL())->procurar();
+
+?>
 
     <a name="" id="" class="btn btn-primary" href="form_marca.php" role="button">Inserir Nova</a><br><br>
     <fieldset>
@@ -21,7 +23,7 @@ $marcas = (new MarcaSQL())->procurar();?>
             <tr align='center'>
                 <td scope='row'>{$marca['nome']}</td>
                 <td><img src='{$marca['imagem']}' width=50px; height=50px;></td>
-                <td><a class='btn btn-primary' href='#' role='button'>Alterar</a>
+                <td><a class='btn btn-primary' href='form_marca.php?id_marca={$marca['id_marca']}' role='button'>Alterar</a>
                 <a class='btn btn-danger' href='MarcaDAO.php?id_marca={$marca['id_marca']}&acao=excluir' role='button'>Excluir</a></td>
             </tr>
             ";

@@ -77,6 +77,31 @@ class MarcaSQL{
         $sql = "delete from marca where id_marca=$id";
         return (new Conexao())->executar($sql);
     }
+    public function selecionarId($id_marca)
+    {
+        $sql = "select * from marca where id_marca=$id_marca";
+        $marca = (new Conexao())->recuperarDados($sql);
+
+        $this->id_marca = $marca[0]['id_marca'];
+        $this->nome = $marca[0]['nome'];
+        $this->imagem = $marca[0]['imagem'];
+
+    }
+    public function alterar($dados)
+    {
+        $nome = $dados['nome'];
+        $id_marca = $dados['id_marca'];
+        $filepath = $dados['imagem'];
+
+        $filetmp = $_FILES["imagem"]["tmp_name"];
+        $filename = $_FILES["imagem"]["name"];
+        $filepath = "../../assets/img/marca/".$filename;
+        move_uploaded_file($filetmp,$filepath);
+
+        $sql = "update marca set nome='$nome', imagem='$filepath' where id_marca=$id_marca";
+        return (new Conexao())->executar($sql);
+    }
+
 }
 
 
