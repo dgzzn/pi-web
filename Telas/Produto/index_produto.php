@@ -1,12 +1,14 @@
 <?php  include_once '../../header.html';
 include_once 'ProdutoSQL.php';
 include_once '../../Telas/Marca/MarcaSQL.php';
+include_once '../../Telas/Medida/MedidaSQL.php';
 $produtos = (new ProdutoSQL())->procurar();
 $marcas = new MarcaSQL();
+$medidas = new MedidaSQL();
 
 ?>
 
-    <a name="" id="" class="btn btn-primary" href="form_produto.php" role="button">Inserir Nova</a><br><br>
+    <a name="" id="" class="btn btn-primary" href="form_produto.php" role="button">Inserir Novo</a><br><br>
     <fieldset>
         <legend>Produtos</legend>
         <div class="table-responsive">
@@ -24,7 +26,7 @@ $marcas = new MarcaSQL();
                 <?php foreach ($produtos as $produto){
                     echo "
             <tr align='center'>
-                <td scope='row'>{$produto['desc_produto']}(kg)</td>
+                <td scope='row'>{$produto['desc_produto']}  ({$produto['unidade']})</td>
                 <td scope='row'>{$produto['qtd_estoque']}</td>
                 <td scope='row'>{$produto['nome']}</td>
                 <td scope='row'>{$produto['valor']}</td>

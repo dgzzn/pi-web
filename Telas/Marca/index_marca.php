@@ -35,15 +35,3 @@ $marcas = (new MarcaSQL())->procurar();
     </fieldset>
 
 
-
-
-
-
-
-<?php  include_once '../../footer.html'?><?php
-/**
- * Created by PhpStorm.
- * User: Zetsubouteki
- * Date: 14/10/2018
- * Time: 18:47
- */

@@ -128,10 +128,10 @@ class ProdutoSQL{
         $codigo = $dados['codigo'];
         $valor = $dados['valor'];
         $fk_marca = $dados['marca'];
-        //$fk_medida = $dados['medida'];
+        $fk_medida = $dados['medida'];
         //desc_produto, qtd_estoque, codigo, valor, fk_id_marca, fk_id_medida
         $sql = "insert into produto(desc_produto, qtd_estoque, codigo, valor, fk_id_marca, fk_id_medida) values ('$desc_produto',
-        $qtd_estoque, '$codigo', $valor, $fk_marca, 1)"; //$fk_medida
+        $qtd_estoque, '$codigo', $valor, $fk_marca, $fk_medida)";
         echo $sql;
 
         return (new Conexao())->executar($sql);
@@ -170,10 +170,10 @@ class ProdutoSQL{
         $codigo = $dados['codigo'];
         $valor = $dados['valor'];
         $fk_id_marca = $dados['marca'];
-        //$fk_id_medida = $dados['fk_id_medida'];  fk_id_medida='$fk_id_medida'
+        $fk_id_medida = $dados['medida'];
 
         $sql = "update produto set desc_produto='$desc_produto', qtd_estoque='$qtd_estoque', 
-        codigo='$codigo', valor='$valor', fk_id_marca='$fk_id_marca' where id_produto=$id_produto";
+        codigo='$codigo', valor='$valor', fk_id_marca='$fk_id_marca', fk_id_medida='$fk_id_medida' where id_produto=$id_produto";
         return (new Conexao())->executar($sql);
     }
 }

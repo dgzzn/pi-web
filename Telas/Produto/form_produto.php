@@ -1,13 +1,13 @@
 <?php include_once("../../header.html");
 include_once 'ProdutoSQL.php';
 include_once '../../Telas/Marca/MarcaSQL.php';
-//include_once '../../Telas/Medida/MedidaSQL.php';
+include_once '../../Telas/Medida/MedidaSQL.php';
 
 
 $produto = new ProdutoSQL();
 $marcas = (new MarcaSQL())->procurar();
 $m = new MarcaSQL();
-//$medidas = (new MedidaSQL())->procurar();
+$medidas = (new MedidaSQL())->procurar();
 
 if(!empty($_GET['id_produto'])){
     $produto->selecionarId($_GET['id_produto']);
@@ -44,11 +44,9 @@ if(!empty($_GET['id_produto'])){
                 <div class="form-group">
                   <label for="medida">Medida*</label>
                   <select class="form-control" name="medida" id="medida">
-                      <?php foreach ($medidas as $medida){
-                          echo "
-                        <option value='{$medida['nome']}'>{$medida['nome']}({$medida['unidade']})</option>
-                        ";
-                      }?>
+                    <?php foreach ($medidas as $medida){ ?>
+                        <option value="<?php echo $medida['id_medida'] ?>" <?php echo ($medida['id_medida'] == $produto->getFkIdMedida()) ? ' selected="selected"' : '';?>><?php echo $medida['nome'],' (', ($medida['unidade']),')'; ?></option>
+                    <?php } ?>
                   </select>
                 </div>
             </div>
