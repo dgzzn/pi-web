@@ -92,6 +92,28 @@
             $sql = "delete from cargo where id_cargo=$id";
             return (new Conexao())->executar($sql);
         }
+        public function selecionarId($id_cargo)
+        {
+            $sql = "select * from cargo where id_cargo=$id_cargo";
+            $cargo = (new Conexao())->recuperarDados($sql);
+
+            $this->id_cargo = $cargo[0]['id_cargo'];
+            $this->nome = $cargo[0]['nome'];
+            $this->nivel_perfil = $cargo[0]['nivel_perfil'];
+            $this->desconto = $cargo[0]['max_desconto'];
+
+        }
+        public function alterar($dados)
+        {
+            $nome = $dados['nome'];
+            $id_cargo = $dados['id_cargo'];
+            $nivel_perfil = $dados['nivel_perfil'];
+            $max_desconto = $dados['max_desconto'];
+
+
+            $sql = "update cargo set nome='$nome', nivel_perfil='$nivel_perfil', max_desconto='$max_desconto' where id_cargo=$id_cargo";
+            return (new Conexao())->executar($sql);
+        }
     }
 
 

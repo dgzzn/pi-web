@@ -18,7 +18,7 @@ $pagamentos = (new PagamentoSQL())->procurar();?>
                     echo "
             <tr align='center'>
                 <td scope='row'>{$pagamento['nome']}</td>
-                <td><a class='btn btn-primary' href='#' role='button'>Alterar</a>
+                <td><a class='btn btn-primary' href='form_pagamento.php?id_forma_pagamento={$pagamento['id_forma_pagamento']}' role='button'>Alterar</a>
                 <a class='btn btn-danger' href='PagamentoDAO.php?id_forma_pagamento={$pagamento['id_forma_pagamento']}&acao=excluir' role='button'>Excluir</a></td>
             </tr>
             ";
@@ -36,9 +36,3 @@ $pagamentos = (new PagamentoSQL())->procurar();?>
 
 
 <?php  include_once '../../footer.html'?><?php
-/**
- * Created by PhpStorm.
- * User: Zetsubouteki
- * Date: 14/10/2018
- * Time: 18:47
- */

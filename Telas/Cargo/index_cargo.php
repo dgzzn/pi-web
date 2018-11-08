@@ -22,7 +22,7 @@ $cargos = (new CargoSQL())->procurar();?>
                 <td scope='row'>{$cargo['nome']}</td>
                 <td scope='row'>{$cargo['nivel_perfil']}</td>
                 <td scope='row'>{$cargo['max_desconto']}%</td>
-                <td><a class='btn btn-primary' href='#' role='button'>Alterar</a>
+                <td><a class='btn btn-primary' href='form_cargo.php?id_cargo={$cargo['id_cargo']}' role='button'>Alterar</a>
                 <a class='btn btn-danger' href='CargoDAO.php?id_cargo={$cargo['id_cargo']}&acao=excluir' role='button'>Excluir</a></td>
             </tr>
             ";
