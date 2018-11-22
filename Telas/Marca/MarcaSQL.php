@@ -91,7 +91,7 @@ class MarcaSQL{
     {
         $nome = $dados['nome'];
         $id_marca = $dados['id_marca'];
-        $filepath = $dados['imagem'];
+        //$filepath = $dados['imagem'];
 
         $filetmp = $_FILES["imagem"]["tmp_name"];
         $filename = $_FILES["imagem"]["name"];

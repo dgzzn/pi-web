@@ -18,11 +18,11 @@ if(!empty($_GET['id_medida'])){
             <div class="form-group">
                 <input type="hidden" name="id_medida" value="<?php echo $medida->getIdMedida(); ?>">
                 <label for="nome"><b>Nome da medida*</b></label>
-                <input type="text" class="form-control col-md-12" name="nome" id="nome" value="<?php echo $medida->getNome(); ?>" aria-describedby="helpId" placeholder="Nome da medida">
+                <input type="text" class="form-control col-md-12" name="nome" required id="nome" value="<?php echo $medida->getNome(); ?>" aria-describedby="helpId" placeholder="Nome da medida">
             </div>
             <div class="form-group">
                 <label for="nome"><b>Unidade da medida*</b></label>
-                <input type="text" class="form-control col-md-12" name="unidade" id="unidade" value="<?php echo $medida->getUnidade(); ?>" aria-describedby="helpId" placeholder="Unidade (kg, ml, etc)">
+                <input type="text" class="form-control col-md-12" name="unidade" id="unidade" required value="<?php echo $medida->getUnidade(); ?>" aria-describedby="helpId" placeholder="Unidade (kg, ml, etc)">
             </div>
         </fieldset>
         <button type="submit" class="btn btn-dark col-md-12">Finalizar cadastro</button>

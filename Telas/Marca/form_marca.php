@@ -18,11 +18,11 @@ if(!empty($_GET['id_marca'])){
             <div class="form-group">
                 <input type="hidden" name="id_marca" value="<?php echo $marca->getIdMarca(); ?>">
                 <label for="nome"><b>Nome da marca*</b></label>
-                <input type="text" class="form-control col-md-12" name="nome" id="nome" value="<?php echo $marca->getNome(); ?>" aria-describedby="helpId" placeholder="Nome da marca">
+                <input type="text" class="form-control col-md-12" required name="nome" id="nome" value="<?php echo $marca->getNome(); ?>" aria-describedby="helpId" placeholder="Nome da marca">
             </div>
             <div class="form-group">
                 <label for=""><b>Foto*</b></label>
-                <input type="file" accept="image/*" class="form-control" name="imagem" id="imagem" aria-describedby="helpId" value="<?php echo $marca->getImagem(); ?>" placeholder=""><?php echo $marca->getImagem(); ?>
+                <input type="file" accept="image/*" class="form-control" name="imagem" id="imagem" required aria-describedby="helpId" value="<?php echo $marca->getImagem(); ?>" placeholder=""><?php echo $marca->getImagem(); ?>
                 <small id="helpId" class="form-text text-muted">*logotipo da marca</small>
             </div>
         </fieldset>

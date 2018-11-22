@@ -4,6 +4,9 @@ include_once 'ClienteSQL.php';
 $cliente = new ClienteSQL();
 
 switch($_GET['acao']){
+    case "visualizar":
+
+        break;
     case "excluir":
         $msg = 2;
         $resultado = $cliente->excluir($_GET['id_cliente']);
@@ -17,6 +20,7 @@ switch($_GET['acao']){
             $resultado = $cliente->inserir($_POST);
         }
         break;
+
 }
 ?>
 

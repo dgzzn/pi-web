@@ -1,15 +1,65 @@
-<?php include_once("../header.html"); ?>
+<?php  include_once '../../header.html';
+include_once 'indexSQL.php';
+$index = (new indexSQL())->procurar();
+$clientes = (new indexSQL())->procuraCliente();
+?>
 
-
-    <form action="" method="post">
-        <div class="form-group">
-          <label for="nome">Nome completo</label>
-          <input type="text" class="form-control" name="nome" id="" aria-describedby="helpId" placeholder="Nome completo">
-          <small id="helpId" class="form-text text-muted">todos os nomes do imdivíduo</small>
+    <fieldset>
+        <legend>Últimas vendas realizadas</legend>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                <tr align="center">
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Data da venda</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($index as $index){
+                    echo "
+            <tr align='center'>
+                <td scope='row'>{$index['nome']}</td>
+                <td scope='row'>{$index['desc_produto']}</td>
+                <td scope='row'>{$index['qtd']}</td>
+                <td scope='row'>{$index['data_venda']}</td></tr>
+            ";
+                }
+                ?>
+                </tbody>
+            </table>
         </div>
-    </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Últimos clientes cadastrados</legend>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                <tr align="center">
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone 1</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($clientes as $cliente){
+                    echo "
+            <tr align='center'>
+                <td scope='row'>{$cliente['nome']} </td>
+                <td scope='row'>{$cliente['tipo_logradouro']} {$cliente['logradouro']} {$cliente['complemento_endereco']}</td>
+                <td scope='row'>{$cliente['tel1']}</td>
+                <td scope='row'>{$cliente['email']}</td>
+            </tr>
+            ";
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
 
 
-
-
-<?php include_once("../footer.html"); ?>
+<?php include_once("../../footer.html"); ?>

@@ -11,12 +11,16 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <link rel="stylesheet" href="../../assets/css/custom.css">
+    <script src="../../assets/javascript/jquery-ui.js"></script>
     <link rel="stylesheet" href="../../assets/css/custom-themes.css">
     <link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png" />
 </head>
-
 <body>
     <div class="page-wrapper chiller-theme sidebar-bg bg1 toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -25,7 +29,7 @@
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
-                    <a href="#">Sistema sem nome</a>
+                    <a href="../../Telas/index/index.php">Sistema sem nome</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
                     </div>
@@ -33,35 +37,35 @@
 
                 <div class="sidebar-header">
 
-                    <!-- FOTO DO USUÁRIO -->
-                    <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="../../assets/img/user.jpg" alt="User picture">
-                    </div>
-                    
-                    <!-- NOME DO USUÁRIO -->
-                    <div class="user-info">
-                        <span class="user-name">Diego
-                            <strong>Gomes</strong>
-                        </span>
-                        <span class="user-role">Administrador</span>
-                    </div>
-                </div>
-                <!-- sidebar-header  -->
-                <div class="sidebar-search">
+                    <!--
+                                   <div class="user-pic">
+                                       <img class="img-responsive img-rounded" src="../../assets/img/user.jpg" alt="User picture">
+                                   </div>
 
-                    <!-- BARRA DE PESQUISA -->
-                    <div>
-                        <div class="input-group">
-                            <input type="text" class="form-control search-menu" placeholder="Procurar...">
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+                                   <div class="user-info">
+                                       <span class="user-name">Diego
+                                           <strong>Gomes</strong>
+                                       </span>
+                                       <span class="user-role">Administrador</span>
+                                   </div>
+                               </div>
+
+                               <div class="sidebar-search">
+
+
+                                   <div>
+                                       <div class="input-group">
+                                           <input type="text" class="form-control search-menu" placeholder="Procurar..." name="pesquisa" id="pesquisa">
+                                           <div class="input-group-append">
+                                               <span class="input-group-text">
+                                                   <i class="fa fa-search" aria-hidden="true"></i>
+                                               </span>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+               -->
                 <div class="sidebar-menu">
                     <ul>
                         <li class="header-menu">
@@ -70,51 +74,50 @@
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-user-alt"></i>
-                                <span>Cliente</span>
+                                <span>Pessoas</span>
                                 <!-- <span class="badge badge-pill badge-danger">New</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="../Telas/Cliente/form_cliente.php">Adicionar novo</a>
+                                        <a href="../../Telas/Cliente/index_cliente.php">Clientes</a>
                                     </li>
-                                    <li>
-                                        <a href="../Telas/Cliente/index_clinte.php">Mostrar todos</a>
+                                    <!--<li>
+                                        <a href="">Mostrar todos</a>
                                     </li>
                                     <li>
                                         <a href="#">Procurar</a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </div>
                         </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-shopping-cart"></i>
-                                <span>Produto</span>
+                                <span>Negócios</span>
                                 <!-- <span class="badge badge-pill badge-primary">3</span> -->
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Adicionar novo
+                                        <a href="../../Telas/Produto/index_produto.php">Produtos
 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">Alterar dados</a>
+                                        <a href="../../Telas/Marca/index_marca.php">Marcas</a>
                                     </li>
                                     <li>
-                                        <a href="#">Procurar</a>
+                                        <a href="../../Telas/Medida/index_medida.php">Medidas</a>
                                     </li>
                                     <li>
-                                            <a href="#">Medida</a>
+                                        <a href="../../Telas/Forma_Pagamento/index_pagamento.php">Formas de pagamento</a>
                                     </li>
-                                    <li>
-                                            <a href="#">Marca</a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </li>
+                        <!--
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="far fa-user"></i>
@@ -150,7 +153,7 @@
                                     
                                 </ul>
                             </div>
-                        </li>
+                        </li>-->
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-dollar-sign "></i>
@@ -159,10 +162,10 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Efetuar nova venda</a>
+                                        <a href="../../Telas/Venda/form_venda.php">Efetuar nova venda</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ver vendas finalizadas</a>
+                                        <a href="../../Telas/Venda/index_venda.php">Ver vendas finalizadas</a>
                                     </li>
                                 </ul>
                             </div>
